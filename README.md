@@ -12,6 +12,7 @@ If you have a point, or lat/long you can use one/or multiple model(s) to extract
 data from that point, zipcode, county, country, state, etc.
 
 The layers are composed of multiple open sources, and you can add models as needed.
+*Addition Layer [sources](http://www.baruch.cuny.edu/geoportal/data/esri/esri_usa.htm)*
 
 Install
 ------------------------------------------
