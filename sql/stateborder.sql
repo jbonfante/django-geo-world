@@ -1,0 +1,5 @@
+BEGIN;
+
+ALTER TABLE `world_stateborder` ENGINE=MyISAM;
+
+COMMIT;
