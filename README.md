@@ -1,4 +1,4 @@
-GeoDjango -- Starter Pack - V1
+GeoDjango -- Starter Pack - V1.1
 ========================================
 *View the [source of this content](https://github.com/jbonfante/django-geo-world)*
 *author's [blog](http://blog.juanbonfante.com)*
@@ -16,7 +16,9 @@ The layers are composed of multiple open sources, and you can add models as need
 
 Install
 ------------------------------------------
-add world to your settings.py applications
+
+*add world to your settings.py applications
+*run syncdb to create db tables
 
 Add Database Records from Shape Files
 ------------------------------------------
@@ -30,3 +32,11 @@ python manage.py shell
 from world import load
 load.run()
 </pre>
+
+TODO
+---------------------------------------------
+* Add more shapefiles to list
+** Streets
+** Places
+** Other Census Data
+* Create helper methods to search through all models and return information gathered from all
