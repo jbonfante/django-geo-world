@@ -30,6 +30,18 @@ class CountyBorderAdmin(admin.GeoModelAdmin):
     list_display = ('name', 'state_name', 'cnty_fips')
 
     search_fields = ['name','state_name']
+class UrbanBorderAdmin(admin.GeoModelAdmin):
+    list_display = ('name','lsad_desc', 'households', 'hse_units')
+
+    search_fields = ['name','households','lsad_desc']
+    list_filter = ['lsad_desc']
+
+
+class PlacePointAdmin(admin.GeoModelAdmin):
+    list_display = ('name','st', 'pop2000','houseunits')
+
+    search_fields = ['name','st','pop2000','houseunits']
+    list_filter = ['place_class']
 
 
 admin.site.register(WorldBorder, WorldBorderAdmin)
@@ -38,3 +50,5 @@ admin.site.register(StateBorder, StateBorderAdmin)
 admin.site.register(ZipcodeBorder, ZipcodeBorderAdmin)
 admin.site.register(USCityBorder, USCityBorderAdmin)
 admin.site.register(CountyBorder, CountyBorderAdmin)
+admin.site.register(PlacePoint, PlacePointAdmin)
+admin.site.register(UrbanBorder, UrbanBorderAdmin)

@@ -16,6 +16,7 @@ world_shp = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data/TM_WOR
 zip_shp = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data/zip_poly.shp'))
 urban_shp = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data/urban.shp'))
 county_shp = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data/dtl_cnty.shp'))
+placepoint_shp = os.path.abspath(os.path.join(os.path.dirname(__file__), 'data/places.shp'))
 
 # Helper shape data definition to streamline loading process
 class ShapeDataDefinition(object):
@@ -44,6 +45,7 @@ load_init["world"] = ShapeDataDefinition(shape_file=world_shp, model=WorldBorder
 load_init["zip"] = ShapeDataDefinition(shape_file=zip_shp,model=ZipcodeBorder, mapping=zipcodeborder_mapping)
 load_init["urban"] = ShapeDataDefinition(shape_file=urban_shp, model=UrbanBorder, mapping=urbanborder_mapping)
 load_init["county"] = ShapeDataDefinition(shape_file=county_shp, model=CountyBorder, mapping=countyborder_mapping)
+load_init["places"] = ShapeDataDefinition(shape_file=placepoint_shp, model=PlacePoint, mapping=placepoint_mapping)
 
 
 

@@ -253,11 +253,11 @@ class UrbanBorder(models.Model):
     ua_id = models.CharField(max_length=5)
     name = models.CharField(max_length=40)
     lsad = models.CharField(max_length=2)
-    lsad_desc = models.CharField(max_length=14)
+    lsad_desc = models.CharField(max_length=14, verbose_name='Description')
     pop2000 = models.IntegerField()
     pop00_sqmi = models.FloatField()
     households = models.IntegerField()
-    hse_units = models.IntegerField()
+    hse_units = models.IntegerField(verbose_name='Housing Units')
     sqmi = models.FloatField()
     oid = models.IntegerField()
     geom = models.MultiPolygonField(srid=4326)
@@ -398,5 +398,41 @@ countyborder_mapping = {
     'sqmi' : 'SQMI',
     'oid' : 'OID',
     'geom' : 'MULTIPOLYGON',
+    }
+
+class PlacePoint(models.Model):
+    name = models.CharField(max_length=40)
+    place_class = models.CharField(max_length=25, verbose_name='Class')
+    st = models.CharField(max_length=2, verbose_name='State')
+    stfips = models.CharField(max_length=2)
+    placefip = models.CharField(max_length=5)
+    houseunits = models.IntegerField()
+    pop2000 = models.IntegerField()
+    pop_class = models.IntegerField()
+    arealand = models.FloatField()
+    areawater = models.FloatField()
+    oid = models.IntegerField()
+    geom = models.MultiPointField(srid=4326)
+    objects = models.GeoManager()
+    class Meta:
+        ordering = ['st','name',]
+        index_together = [['st', 'name'], ]
+    def __unicode__(self):
+        return self.name
+
+# Auto-generated `LayerMapping` dictionary for PlacesPoints model
+placepoint_mapping = {
+    'name' : 'NAME',
+    'place_class' : 'CLASS',
+    'st' : 'ST',
+    'stfips' : 'STFIPS',
+    'placefip' : 'PLACEFIP',
+    'houseunits' : 'HOUSEUNITS',
+    'pop2000' : 'POP2000',
+    'pop_class' : 'POP_CLASS',
+    'arealand' : 'AREALAND',
+    'areawater' : 'AREAWATER',
+    'oid' : 'OID',
+    'geom' : 'MULTIPOINT',
     }
 
