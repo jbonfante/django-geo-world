@@ -1,4 +1,4 @@
-GeoDjango -- Starter Pack - V1.1
+Django-Geo-World -- Starter Pack - V1.2
 ========================================
 *View the [source of this content](https://github.com/jbonfante/django-geo-world)*
 *author's [blog](http://blog.juanbonfante.com)*
@@ -17,7 +17,7 @@ The layers are composed of multiple open sources, and you can add models as need
 Install
 ------------------------------------------
 
-*add world to your settings.py applications
+*add django_geo_world to your INSTALLED_APPS settings.py
 *run syncdb to create db tables
 
 Add Database Records from Shape Files
@@ -29,9 +29,16 @@ To initialize layer data launch:
 
 python manage.py shell
 <pre>
-from world import load
+from django_geo_world.world import load
 load.run()
 </pre>
+
+Running Sample App
+---------------------------------------------
+Sample app uses PostGre + PostGIS database.
+
+Make sure to enable GIS extensions on your database, more information on how to setup Django + PostGIS
+* Django Docs [sources](https://docs.djangoproject.com/en/1.6/ref/contrib/gis/install/postgis/#post-installation)
 
 TODO
 ---------------------------------------------
@@ -40,3 +47,5 @@ TODO
 ** Places
 ** Other Census Data
 * Create helper methods to search through all models and return information gathered from all
+* Further Documentation
+* Add Unit Tests

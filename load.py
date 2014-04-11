@@ -2,7 +2,7 @@ __author__ = 'jbonfante'
 
 import os
 from django.contrib.gis.utils import LayerMapping
-from models import *
+from django_geo_world.models import *
 
 import importlib
 

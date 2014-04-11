@@ -1,0 +1,1 @@
+Search.setIndex({objnames:{},filenames:["index"],objtypes:{},envversion:43,objects:{},titles:["Welcome to Django Geo World&#8217;s documentation!"],titleterms:{django:0,indic:0,world:0,geo:0,welcom:0,tabl:0,document:0},terms:{page:0,content:0,modul:0,search:0,index:0}})

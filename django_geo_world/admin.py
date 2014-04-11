@@ -1,6 +1,6 @@
 __author__ = 'jbonfante'
 from django.contrib.gis import admin
-from models import *
+from .models import *
 
 class WorldBorderAdmin(admin.GeoModelAdmin):
     list_display =  ('name' , 'pop2005', 'un','region','subregion', 'lat', 'lon',)
