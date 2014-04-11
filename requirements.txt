@@ -1,0 +1,51 @@
+Django==1.6.2
+Jinja2==2.7.2
+MarkupSafe==0.19
+Pygments==1.6
+South==0.8.4
+Sphinx==1.2.2
+amqp==1.4.4
+anyjson==0.3.3
+-e git+https://github.com/boto/bcdoc.git@835b7b54d9ba9abe4d674b53e5465891522899f7#egg=bcdoc-develop
+billiard==3.3.0.16
+boto==2.27.0
+-e git://github.com/boto/boto3.git@7529f17b37fc7e0228ee5fe83155234247e63012#egg=boto3-develop
+botocore==0.24.0
+celery==3.1.10
+django-boto==0.3.1
+django-braces==1.4.0
+django-celery==3.1.10
+django-debug-toolbar==1.0.1
+django-localflavor==1.0
+django-model-utils==2.0.3
+django-msgpack-serializer==0.0.3
+-e git+git@github.com:jbonfante/django-object-tools.git@6d5f2b7617d28d0ec0eac36f674e416d20d51d8e#egg=django_object_tools-origin/master
+django-post-office==0.8.0
+-e git+git@github.com:jbonfante/django-sendgrid.git@e2ed7d3865a7ef61424be1a2ce940827f4497721#egg=django_sendgrid-develop
+django-sphinx==2.2.4
+django-storages==1.1.8
+-e git+git@github.com:jbonfante/django-zebra.git@f2d732f14e0db2736517591424893261f8bd9727#egg=django_zebra-origin/HEAD
+djangotoolbox==1.6.2
+docutils==0.11
+html5lib==0.999
+jmespath==0.1.0
+jsonfield==0.9.20
+kombu==3.0.14
+msgpack-python==0.4.2
+oauthlib==0.6.1
+ply==3.4
+psycopg2==2.5.2
+python-dateutil==2.2
+python-openid==2.2.5
+python-social-auth==0.1.23
+python3-memcached==1.51
+python3-openid==3.0.4
+pytz==2014.2
+redis==2.9.1
+requests==2.2.1
+requests-oauthlib==0.4.0
+six==1.6.1
+smtpapi==0.1.1
+sqlparse==0.1.11
+stripe==1.12.2
+unittest2py3k==0.5.1
