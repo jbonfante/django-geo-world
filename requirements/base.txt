@@ -1,0 +1,55 @@
+# Python Libs
+Jinja2==2.7.2
+MarkupSafe==0.19
+Pygments==1.6
+anyjson==0.3.3
+docutils==0.11
+pytz==2014.2
+six==1.6.1
+sqlparse==0.1.11
+html5lib==0.999
+ply==3.4
+python-dateutil==2.2
+
+# Bleeding edge Django
+django==1.6.5
+
+# Configuration
+django-configurations==0.8
+django-secure==1.0
+django-cache-url==0.8.0
+dj-database-url==0.3.0
+
+# Forms
+django-braces==1.4.0
+django-crispy-forms==1.4.0
+django-floppyforms==1.1.1
+
+# Models
+South==0.8.4
+django-model-utils==2.0.3
+
+# images
+Pillow==2.4.0
+
+# For user registration, either via email or social
+# Well-built with regular release cycles!
+django-allauth==0.16.1
+
+# For the persistance stores
+psycopg2==2.5.3
+
+# Unicode slugification
+unicode-slugify==0.1.1
+django-autoslug==1.7.2
+
+# Useful things
+django-avatar==2.0
+
+
+# Your custom requirements go here
+jsonfield==0.9.20
+django-localflavor==1.0
+djangotoolbox==1.6.2
+
+

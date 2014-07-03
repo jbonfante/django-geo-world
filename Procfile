@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath="$PWD/django_geo_world" config.wsgi:application
