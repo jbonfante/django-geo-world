@@ -1,4 +1,5 @@
 from django.contrib.gis.db import models
+from model_utils import Choices
 
 # Create your models here.
 class WorldBorder(models.Model):
@@ -202,6 +203,7 @@ class ZipcodeBorder(models.Model):
 
     def __unicode__(self):
         return self.zip
+
 
 # Auto-generated `LayerMapping` dictionary for ZipcodeBorder model
 zipcodeborder_mapping = {
@@ -435,4 +437,23 @@ placepoint_mapping = {
     'oid' : 'OID',
     'geom' : 'MULTIPOINT',
     }
+
+class Zipcode(mode.Model):
+    zip = models.CharField(max_length=5)
+    type = Choices('UNIQUE', 'PO BOX', 'STANDARD', 'MILITARY')
+    primary_city = models.CharField(max_length=50, verbose_name='City')
+    acceptable_cities = models.TextField(_('acceptable cities'), blank=True)
+    unacceptable_cities = models.TextField(_('acceptable cities'), blank=True)
+    state = models.CharField(_('state'), max_length=2)
+    county = models.CharField(_('county'), max_length=30)
+    timezone = models.CharField(_('timezone'), max_length=30)
+    area_codes = models.CharField(_('area codes'), max_length=30)
+    latitude = models.FloatField(_('latitude'))
+    longitude = models.FloatField(_('longitude'))
+    world_region = models.CharField(_('world region'), max_length=2)
+    country = models.CharField(_('country'), max_length=2)
+    decommissioned = models.BooleanField(_('decommissioned'))
+    estimated_population = models.IntegerField(_('estimated population'), blank=True, null=True)
+    notes = models.CharField(max_length=125)
+    objects = models.GeoManager()
 
