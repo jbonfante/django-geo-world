@@ -1,11 +1,12 @@
 from distutils.core import setup
+from setuptools import find_packages
 
 INSTALL_REQUIRES = ['lxml>=2.3.4']
 
 setup(
     name='django-geo-world',
     version='1.2',
-    packages=['django_geo_world'],
+    packages=find_packages(),
     url='https://github.com/jbonfante/django-geo-world',
     license='FreeBSD',
     author='juanrbonfante',
