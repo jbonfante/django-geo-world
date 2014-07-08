@@ -1,11 +1,13 @@
+from django.utils.translation import ugettext_lazy as _
 from django.contrib.gis.db import models
 from model_utils import Choices
+
 
 # Create your models here.
 class WorldBorder(models.Model):
     class Meta:
         ordering = ['name']
-        index_together = [['lat','lon']]
+        index_together = [['lat', 'lon']]
     # Regular Django fields corresponding to the attributes in the
     # world borders shapefile.
     fips = models.CharField(max_length=2)
@@ -22,26 +24,27 @@ class WorldBorder(models.Model):
     geom = models.MultiPolygonField(srid=4326)
     objects = models.GeoManager()
 
-
-
     # Returns the string representation of the model.
     def __unicode__(self):
         return self.name
-    # Auto-generated `LayerMapping` dictionary for WorldBorder model
+        # Auto-generated `LayerMapping` dictionary for WorldBorder model
+
+
 worldborder_mapping = {
-        'fips' : 'FIPS',
-        'iso2' : 'ISO2',
-        'iso3' : 'ISO3',
-        'un' : 'UN',
-        'name' : 'NAME',
-        'area' : 'AREA',
-        'pop2005' : 'POP2005',
-        'region' : 'REGION',
-        'subregion' : 'SUBREGION',
-        'lon' : 'LON',
-        'lat' : 'LAT',
-        'geom' : 'MULTIPOLYGON',
-        }
+    'fips': 'FIPS',
+    'iso2': 'ISO2',
+    'iso3': 'ISO3',
+    'un': 'UN',
+    'name': 'NAME',
+    'area': 'AREA',
+    'pop2005': 'POP2005',
+    'region': 'REGION',
+    'subregion': 'SUBREGION',
+    'lon': 'LON',
+    'lat': 'LAT',
+    'geom': 'MULTIPOLYGON',
+}
+
 
 class StateBorder(models.Model):
     class Meta:
@@ -105,58 +108,57 @@ class StateBorder(models.Model):
 
 # Auto-generated `LayerMapping` dictionary for StateBorder model
 stateborder_mapping = {
-    'state_name' : 'STATE_NAME',
-    'state_fips' : 'STATE_FIPS',
-    'sub_region' : 'SUB_REGION',
-    'state_abbr' : 'STATE_ABBR',
-    'pop2000' : 'POP2000',
-    'pop2007' : 'POP2007',
-    'pop00_sqmi' : 'POP00_SQMI',
-    'pop07_sqmi' : 'POP07_SQMI',
-    'white' : 'WHITE',
-    'black' : 'BLACK',
-    'ameri_es' : 'AMERI_ES',
-    'asian' : 'ASIAN',
-    'hawn_pi' : 'HAWN_PI',
-    'other' : 'OTHER',
-    'mult_race' : 'MULT_RACE',
-    'hispanic' : 'HISPANIC',
-    'males' : 'MALES',
-    'females' : 'FEMALES',
-    'age_under5' : 'AGE_UNDER5',
-    'age_5_17' : 'AGE_5_17',
-    'age_18_21' : 'AGE_18_21',
-    'age_22_29' : 'AGE_22_29',
-    'age_30_39' : 'AGE_30_39',
-    'age_40_49' : 'AGE_40_49',
-    'age_50_64' : 'AGE_50_64',
-    'age_65_up' : 'AGE_65_UP',
-    'med_age' : 'MED_AGE',
-    'med_age_m' : 'MED_AGE_M',
-    'med_age_f' : 'MED_AGE_F',
-    'households' : 'HOUSEHOLDS',
-    'ave_hh_sz' : 'AVE_HH_SZ',
-    'hsehld_1_m' : 'HSEHLD_1_M',
-    'hsehld_1_f' : 'HSEHLD_1_F',
-    'marhh_chd' : 'MARHH_CHD',
-    'marhh_no_c' : 'MARHH_NO_C',
-    'mhh_child' : 'MHH_CHILD',
-    'fhh_child' : 'FHH_CHILD',
-    'families' : 'FAMILIES',
-    'ave_fam_sz' : 'AVE_FAM_SZ',
-    'hse_units' : 'HSE_UNITS',
-    'vacant' : 'VACANT',
-    'owner_occ' : 'OWNER_OCC',
-    'renter_occ' : 'RENTER_OCC',
-    'no_farms97' : 'NO_FARMS97',
-    'avg_size97' : 'AVG_SIZE97',
-    'crop_acr97' : 'CROP_ACR97',
-    'avg_sale97' : 'AVG_SALE97',
-    'sqmi' : 'SQMI',
-    'oid' : 'OID',
-    'geom' : 'MULTIPOLYGON',
-    }
-
+    'state_name': 'STATE_NAME',
+    'state_fips': 'STATE_FIPS',
+    'sub_region': 'SUB_REGION',
+    'state_abbr': 'STATE_ABBR',
+    'pop2000': 'POP2000',
+    'pop2007': 'POP2007',
+    'pop00_sqmi': 'POP00_SQMI',
+    'pop07_sqmi': 'POP07_SQMI',
+    'white': 'WHITE',
+    'black': 'BLACK',
+    'ameri_es': 'AMERI_ES',
+    'asian': 'ASIAN',
+    'hawn_pi': 'HAWN_PI',
+    'other': 'OTHER',
+    'mult_race': 'MULT_RACE',
+    'hispanic': 'HISPANIC',
+    'males': 'MALES',
+    'females': 'FEMALES',
+    'age_under5': 'AGE_UNDER5',
+    'age_5_17': 'AGE_5_17',
+    'age_18_21': 'AGE_18_21',
+    'age_22_29': 'AGE_22_29',
+    'age_30_39': 'AGE_30_39',
+    'age_40_49': 'AGE_40_49',
+    'age_50_64': 'AGE_50_64',
+    'age_65_up': 'AGE_65_UP',
+    'med_age': 'MED_AGE',
+    'med_age_m': 'MED_AGE_M',
+    'med_age_f': 'MED_AGE_F',
+    'households': 'HOUSEHOLDS',
+    'ave_hh_sz': 'AVE_HH_SZ',
+    'hsehld_1_m': 'HSEHLD_1_M',
+    'hsehld_1_f': 'HSEHLD_1_F',
+    'marhh_chd': 'MARHH_CHD',
+    'marhh_no_c': 'MARHH_NO_C',
+    'mhh_child': 'MHH_CHILD',
+    'fhh_child': 'FHH_CHILD',
+    'families': 'FAMILIES',
+    'ave_fam_sz': 'AVE_FAM_SZ',
+    'hse_units': 'HSE_UNITS',
+    'vacant': 'VACANT',
+    'owner_occ': 'OWNER_OCC',
+    'renter_occ': 'RENTER_OCC',
+    'no_farms97': 'NO_FARMS97',
+    'avg_size97': 'AVG_SIZE97',
+    'crop_acr97': 'CROP_ACR97',
+    'avg_sale97': 'AVG_SALE97',
+    'sqmi': 'SQMI',
+    'oid': 'OID',
+    'geom': 'MULTIPOLYGON',
+}
 
 
 class CityBorder(models.Model):
@@ -167,23 +169,22 @@ class CityBorder(models.Model):
     geom = models.MultiPointField(srid=4326)
     objects = models.GeoManager()
 
-
     class Meta:
         ordering = ['name', 'country']
         index_together = [['name', 'country'], ]
-
 
     def __unicode__(self):
         return self.name
 
 # Auto-generated `LayerMapping` dictionary for CityBorder model
 cityborder_mapping = {
-    'name' : 'NAME',
-    'country' : 'COUNTRY',
-    'population' : 'POPULATION',
-    'capital' : 'CAPITAL',
-    'geom' : 'MULTIPOINT',
-    }
+    'name': 'NAME',
+    'country': 'COUNTRY',
+    'population': 'POPULATION',
+    'capital': 'CAPITAL',
+    'geom': 'MULTIPOINT',
+}
+
 
 class ZipcodeBorder(models.Model):
     zip = models.CharField(max_length=5)
@@ -198,7 +199,7 @@ class ZipcodeBorder(models.Model):
     objects = models.GeoManager()
 
     class Meta:
-        ordering = ['zip',]
+        ordering = ['zip', ]
         index_together = [['zip', 'state'], ]
 
     def __unicode__(self):
@@ -207,16 +208,17 @@ class ZipcodeBorder(models.Model):
 
 # Auto-generated `LayerMapping` dictionary for ZipcodeBorder model
 zipcodeborder_mapping = {
-    'zip' : 'ZIP',
-    'po_name' : 'PO_NAME',
-    'state' : 'STATE',
-    'sumblkpop' : 'SUMBLKPOP',
-    'pop2007' : 'POP2007',
-    'pop07_sqmi' : 'POP07_SQMI',
-    'sqmi' : 'SQMI',
-    'oid' : 'OID',
-    'geom' : 'MULTIPOLYGON',
-    }
+    'zip': 'ZIP',
+    'po_name': 'PO_NAME',
+    'state': 'STATE',
+    'sumblkpop': 'SUMBLKPOP',
+    'pop2007': 'POP2007',
+    'pop07_sqmi': 'POP07_SQMI',
+    'sqmi': 'SQMI',
+    'oid': 'OID',
+    'geom': 'MULTIPOLYGON',
+}
+
 
 class USCityBorder(models.Model):
     feature = models.CharField(max_length=21)
@@ -235,21 +237,22 @@ class USCityBorder(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['st_abbrev','name',]
+        ordering = ['st_abbrev', 'name', ]
 
 # Auto-generated `LayerMapping` dictionary for USCityBorder model
 uscityborder_mapping = {
-    'feature' : 'FEATURE',
-    'name' : 'NAME',
-    'st_abbrev' : 'ST_ABBREV',
-    'fips' : 'FIPS',
-    'place_fips' : 'PLACE_FIPS',
-    'pop_2000' : 'POP_2000',
-    'pop2007' : 'POP2007',
-    'status' : 'STATUS',
-    'oid' : 'OID',
-    'geom' : 'MULTIPOINT',
-    }
+    'feature': 'FEATURE',
+    'name': 'NAME',
+    'st_abbrev': 'ST_ABBREV',
+    'fips': 'FIPS',
+    'place_fips': 'PLACE_FIPS',
+    'pop_2000': 'POP_2000',
+    'pop2007': 'POP2007',
+    'status': 'STATUS',
+    'oid': 'OID',
+    'geom': 'MULTIPOINT',
+}
+
 
 class UrbanBorder(models.Model):
     ua_id = models.CharField(max_length=5)
@@ -266,25 +269,26 @@ class UrbanBorder(models.Model):
     objects = models.GeoManager()
 
     class Meta:
-        ordering = ['name',]
+        ordering = ['name', ]
 
     def __unicode__(self):
         return self.name
 
 # Auto-generated `LayerMapping` dictionary for UrbanBorder model
 urbanborder_mapping = {
-    'ua_id' : 'UA_ID',
-    'name' : 'NAME',
-    'lsad' : 'LSAD',
-    'lsad_desc' : 'LSAD_DESC',
-    'pop2000' : 'POP2000',
-    'pop00_sqmi' : 'POP00_SQMI',
-    'households' : 'HOUSEHOLDS',
-    'hse_units' : 'HSE_UNITS',
-    'sqmi' : 'SQMI',
-    'oid' : 'OID',
-    'geom' : 'MULTIPOLYGON',
-    }
+    'ua_id': 'UA_ID',
+    'name': 'NAME',
+    'lsad': 'LSAD',
+    'lsad_desc': 'LSAD_DESC',
+    'pop2000': 'POP2000',
+    'pop00_sqmi': 'POP00_SQMI',
+    'households': 'HOUSEHOLDS',
+    'hse_units': 'HSE_UNITS',
+    'sqmi': 'SQMI',
+    'oid': 'OID',
+    'geom': 'MULTIPOLYGON',
+}
+
 
 class CountyBorder(models.Model):
     name = models.CharField(max_length=32)
@@ -341,7 +345,7 @@ class CountyBorder(models.Model):
     objects = models.GeoManager()
 
     class Meta:
-        ordering = ['state_name','name',]
+        ordering = ['state_name', 'name', ]
         index_together = [['state_name', 'name'], ]
 
     def __unicode__(self):
@@ -349,58 +353,59 @@ class CountyBorder(models.Model):
 
 # Auto-generated `LayerMapping` dictionary for CountyBorder model
 countyborder_mapping = {
-    'name' : 'NAME',
-    'state_name' : 'STATE_NAME',
-    'state_fips' : 'STATE_FIPS',
-    'cnty_fips' : 'CNTY_FIPS',
-    'fips' : 'FIPS',
-    'pop2000' : 'POP2000',
-    'pop2007' : 'POP2007',
-    'pop00_sqmi' : 'POP00_SQMI',
-    'pop07_sqmi' : 'POP07_SQMI',
-    'white' : 'WHITE',
-    'black' : 'BLACK',
-    'ameri_es' : 'AMERI_ES',
-    'asian' : 'ASIAN',
-    'hawn_pi' : 'HAWN_PI',
-    'other' : 'OTHER',
-    'mult_race' : 'MULT_RACE',
-    'hispanic' : 'HISPANIC',
-    'males' : 'MALES',
-    'females' : 'FEMALES',
-    'age_under5' : 'AGE_UNDER5',
-    'age_5_17' : 'AGE_5_17',
-    'age_18_21' : 'AGE_18_21',
-    'age_22_29' : 'AGE_22_29',
-    'age_30_39' : 'AGE_30_39',
-    'age_40_49' : 'AGE_40_49',
-    'age_50_64' : 'AGE_50_64',
-    'age_65_up' : 'AGE_65_UP',
-    'med_age' : 'MED_AGE',
-    'med_age_m' : 'MED_AGE_M',
-    'med_age_f' : 'MED_AGE_F',
-    'households' : 'HOUSEHOLDS',
-    'ave_hh_sz' : 'AVE_HH_SZ',
-    'hsehld_1_m' : 'HSEHLD_1_M',
-    'hsehld_1_f' : 'HSEHLD_1_F',
-    'marhh_chd' : 'MARHH_CHD',
-    'marhh_no_c' : 'MARHH_NO_C',
-    'mhh_child' : 'MHH_CHILD',
-    'fhh_child' : 'FHH_CHILD',
-    'families' : 'FAMILIES',
-    'ave_fam_sz' : 'AVE_FAM_SZ',
-    'hse_units' : 'HSE_UNITS',
-    'vacant' : 'VACANT',
-    'owner_occ' : 'OWNER_OCC',
-    'renter_occ' : 'RENTER_OCC',
-    'no_farms97' : 'NO_FARMS97',
-    'avg_size97' : 'AVG_SIZE97',
-    'crop_acr97' : 'CROP_ACR97',
-    'avg_sale97' : 'AVG_SALE97',
-    'sqmi' : 'SQMI',
-    'oid' : 'OID',
-    'geom' : 'MULTIPOLYGON',
-    }
+    'name': 'NAME',
+    'state_name': 'STATE_NAME',
+    'state_fips': 'STATE_FIPS',
+    'cnty_fips': 'CNTY_FIPS',
+    'fips': 'FIPS',
+    'pop2000': 'POP2000',
+    'pop2007': 'POP2007',
+    'pop00_sqmi': 'POP00_SQMI',
+    'pop07_sqmi': 'POP07_SQMI',
+    'white': 'WHITE',
+    'black': 'BLACK',
+    'ameri_es': 'AMERI_ES',
+    'asian': 'ASIAN',
+    'hawn_pi': 'HAWN_PI',
+    'other': 'OTHER',
+    'mult_race': 'MULT_RACE',
+    'hispanic': 'HISPANIC',
+    'males': 'MALES',
+    'females': 'FEMALES',
+    'age_under5': 'AGE_UNDER5',
+    'age_5_17': 'AGE_5_17',
+    'age_18_21': 'AGE_18_21',
+    'age_22_29': 'AGE_22_29',
+    'age_30_39': 'AGE_30_39',
+    'age_40_49': 'AGE_40_49',
+    'age_50_64': 'AGE_50_64',
+    'age_65_up': 'AGE_65_UP',
+    'med_age': 'MED_AGE',
+    'med_age_m': 'MED_AGE_M',
+    'med_age_f': 'MED_AGE_F',
+    'households': 'HOUSEHOLDS',
+    'ave_hh_sz': 'AVE_HH_SZ',
+    'hsehld_1_m': 'HSEHLD_1_M',
+    'hsehld_1_f': 'HSEHLD_1_F',
+    'marhh_chd': 'MARHH_CHD',
+    'marhh_no_c': 'MARHH_NO_C',
+    'mhh_child': 'MHH_CHILD',
+    'fhh_child': 'FHH_CHILD',
+    'families': 'FAMILIES',
+    'ave_fam_sz': 'AVE_FAM_SZ',
+    'hse_units': 'HSE_UNITS',
+    'vacant': 'VACANT',
+    'owner_occ': 'OWNER_OCC',
+    'renter_occ': 'RENTER_OCC',
+    'no_farms97': 'NO_FARMS97',
+    'avg_size97': 'AVG_SIZE97',
+    'crop_acr97': 'CROP_ACR97',
+    'avg_sale97': 'AVG_SALE97',
+    'sqmi': 'SQMI',
+    'oid': 'OID',
+    'geom': 'MULTIPOLYGON',
+}
+
 
 class PlacePoint(models.Model):
     name = models.CharField(max_length=40)
@@ -416,38 +421,42 @@ class PlacePoint(models.Model):
     oid = models.IntegerField()
     geom = models.MultiPointField(srid=4326)
     objects = models.GeoManager()
+
     class Meta:
-        ordering = ['st','name',]
+        ordering = ['st', 'name', ]
         index_together = [['st', 'name'], ]
+
     def __unicode__(self):
         return self.name
 
 # Auto-generated `LayerMapping` dictionary for PlacesPoints model
 placepoint_mapping = {
-    'name' : 'NAME',
-    'place_class' : 'CLASS',
-    'st' : 'ST',
-    'stfips' : 'STFIPS',
-    'placefip' : 'PLACEFIP',
-    'houseunits' : 'HOUSEUNITS',
-    'pop2000' : 'POP2000',
-    'pop_class' : 'POP_CLASS',
-    'arealand' : 'AREALAND',
-    'areawater' : 'AREAWATER',
-    'oid' : 'OID',
-    'geom' : 'MULTIPOINT',
-    }
+    'name': 'NAME',
+    'place_class': 'CLASS',
+    'st': 'ST',
+    'stfips': 'STFIPS',
+    'placefip': 'PLACEFIP',
+    'houseunits': 'HOUSEUNITS',
+    'pop2000': 'POP2000',
+    'pop_class': 'POP_CLASS',
+    'arealand': 'AREALAND',
+    'areawater': 'AREAWATER',
+    'oid': 'OID',
+    'geom': 'MULTIPOINT',
+}
 
-class Zipcode(mode.Model):
+
+class Zipcode(models.Model):
     zip = models.CharField(max_length=5)
-    type = Choices('UNIQUE', 'PO BOX', 'STANDARD', 'MILITARY')
+    TYPE = Choices('UNIQUE', 'PO BOX', 'STANDARD', 'MILITARY')
+    type = models.CharField(_('type'), choices=TYPE, default=TYPE.STANDARD, max_length=20)
     primary_city = models.CharField(max_length=50, verbose_name='City')
     acceptable_cities = models.TextField(_('acceptable cities'), blank=True)
     unacceptable_cities = models.TextField(_('acceptable cities'), blank=True)
     state = models.CharField(_('state'), max_length=2)
-    county = models.CharField(_('county'), max_length=30)
-    timezone = models.CharField(_('timezone'), max_length=30)
-    area_codes = models.CharField(_('area codes'), max_length=30)
+    county = models.CharField(_('county'), max_length=50)
+    timezone = models.CharField(_('timezone'), max_length=50)
+    area_codes = models.CharField(_('area codes'), max_length=50)
     latitude = models.FloatField(_('latitude'))
     longitude = models.FloatField(_('longitude'))
     world_region = models.CharField(_('world region'), max_length=2)
@@ -456,4 +465,6 @@ class Zipcode(mode.Model):
     estimated_population = models.IntegerField(_('estimated population'), blank=True, null=True)
     notes = models.CharField(max_length=125)
     objects = models.GeoManager()
+
+
 
