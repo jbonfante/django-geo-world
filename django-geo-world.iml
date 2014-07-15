@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="django" name="Django">
+      <configuration>
+        <option name="rootFolder" value="$MODULE_DIR$" />
+        <option name="settingsModule" value="django_geo_world/settings.py" />
+        <option name="manageScript" value="manage.py" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="sass-stdlib" level="application" />
+  </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="$MODULE_DIR$/requirements.txt" />
+  </component>
+  <component name="ReSTService">
+    <option name="workdir" value="$MODULE_DIR$" />
+    <option name="DOC_DIR" value="$MODULE_DIR$" />
+  </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_CONFIGURATION" value="Django" />
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$/../bitcoin/src/leveldb/doc" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/plugins/wsc/dialogs" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/plugins/preview" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/samples" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/samples/plugins/dialog" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/samples/plugins/toolbar" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/samples/plugins/enterkey" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/samples/plugins/magicline" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/samples/plugins/htmlwriter" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/samples/plugins/tableresize" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/samples/plugins/wysiwygarea" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/samples/plugins/sourcedialog" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/static/ckeditor/ckeditor/samples/plugins/stylesheetparser" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/templates" />
+        <option value="$MODULE_DIR$/../django-ckeditor/ckeditor/templates/ckeditor" />
+        <option value="$MODULE_DIR$/../django-sendgrid/example_project/main/templates/main" />
+        <option value="$MODULE_DIR$/../django-sendgrid/example_project/templates" />
+        <option value="$MODULE_DIR$/../django-api-rest-and-angular/example/api/templates" />
+        <option value="$MODULE_DIR$/../django-api-rest-and-angular/node_modules/grunt/node_modules/colors" />
+        <option value="$MODULE_DIR$/../django-api-rest-and-angular/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore" />
+        <option value="$MODULE_DIR$/../django-api-rest-and-angular/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test" />
+        <option value="$MODULE_DIR$/../django-api-rest-and-angular/node_modules/grunt/node_modules/js-yaml/node_modules/argparse/node_modules/underscore.string/test/test_underscore" />
+        <option value="$MODULE_DIR$/../django-api-rest-and-angular/node_modules/grunt/node_modules/underscore.string/test" />
+        <option value="$MODULE_DIR$/../django-api-rest-and-angular/node_modules/grunt/node_modules/underscore.string/test/test_underscore" />
+      </list>
+    </option>
+  </component>
+</module>
+

@@ -1,5 +1,0 @@
-BEGIN;
-
-ALTER TABLE `world_worldborder` ENGINE=MyISAM;
-
-COMMIT;
